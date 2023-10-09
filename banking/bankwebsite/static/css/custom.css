@@ -1,0 +1,38 @@
+body{
+    font-family : 'Roboto',sans-serif;
+}
+
+.nav-item{
+    letter-spacing : .2em;
+    font-size : 14px;
+    text-transform : uppercase;
+}
+
+.dropdown-item{
+    letter-spacing : .2em;
+    font-size : 14px;
+    text-transform : uppercase;
+}
+.my_footer{
+    padding-top:20px;
+    background-color:#d4b86c;
+    height:60px;
+
+}
+.my_footer p{
+
+    font-size : 14px;
+
+}
+.navbar-brand{
+    font-weight: bold;
+    font-family: "Times New Roman", Times, serif;
+}
+.container-fluid{
+    background-color: #d4b86c;
+}
+
+.nav-item a:hover{
+    background-color: #ddd;
+}
+

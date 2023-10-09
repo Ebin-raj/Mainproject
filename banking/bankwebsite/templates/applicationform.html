@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+
+body{
+  font-family: Calibri, Helvetica, sans-serif;
+  background-color: darkgreen;
+}
+.container {
+    padding: 50px;
+  background-color: lightgreen;
+}
+
+input[type=text], input[type=password], textarea {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+input[type=text,]:focus, input[type=password]:focus {
+  background-color: orange;
+  outline: none;
+}
+ div {
+            padding: 10px 0;
+         }
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+.registerbtn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 10%;
+  opacity: 0.9;
+}
+.registerbtn:hover {
+  opacity: 1;
+}
+.dropdown-submenu {
+  position: relative;
+}
+
+.dropdown-submenu .dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -1px;
+
+
+</style>
+    <script language="javascript" type="text/javascript">
+            function dynamicdropdown(listindex)
+            {
+                document.getElementById("subcategory").length = 0;
+                switch (listindex)
+                {
+                    case "Kottayam" :
+                        document.getElementById("subcategory").options[0]=new Option("Please select branch","");
+                        document.getElementById("subcategory").options[1]=new Option("Puthuppally","Puthuppally");
+                        document.getElementById("subcategory").options[2]=new Option("Manarcadu","Manarcadu");
+                        document.getElementById("subcategory").options[3]=new Option("Mannanam","Mannanam");
+                        break;
+
+                    case "Kollam" :
+                        document.getElementById("subcategory").options[0]=new Option("Please select branch","");
+                        document.getElementById("subcategory").options[1]=new Option("Kottarakkara","Kottarakkara");
+                        document.getElementById("subcategory").options[2]=new Option("Punaloor","Punaloor");
+                        document.getElementById("subcategory").options[3]=new Option("Ayoor","Ayoor");
+                        break;
+                    case "Thiruvananthapuram" :
+                        document.getElementById("subcategory").options[0]=new Option("Please select branch","");
+                        document.getElementById("subcategory").options[1]=new Option("Poovar","Poovar");
+                        document.getElementById("subcategory").options[2]=new Option("Vizhinjam","Vizhinjam");
+                        document.getElementById("subcategory").options[3]=new Option("Attingal","Attingal");
+                        break;
+                    case "Alappuzha" :
+                        document.getElementById("subcategory").options[0]=new Option("Please select branch","");
+                        document.getElementById("subcategory").options[1]=new Option("Ambalapuzha","Ambalapuzha");
+                        document.getElementById("subcategory").options[2]=new Option("Mannarasala","Mannarasala");
+                        document.getElementById("subcategory").options[3]=new Option("Chettikulangara","Chettikulangara");
+                        break;
+                    case "Ernakulam" :
+                        document.getElementById("subcategory").options[0]=new Option("Please select branch","");
+                        document.getElementById("subcategory").options[1]=new Option("Cherai","Cherai");
+                        document.getElementById("subcategory").options[2]=new Option("Perumbavoor","Perumbavoor");
+                        document.getElementById("subcategory").options[3]=new Option("Muvattupuzha","Muvattupuzha");
+                        break;
+                }
+                return true;
+            }
+
+
+</script>
+
+
+
+</head>
+<body>
+<form action="#" onsubmit="return validation()">
+  <div class="container">
+  <center>  <h1> Application Form</h1> </center>
+  <hr>
+  <label> Name </label>
+    <input type="text" name="name" placeholder="name" size="15" required/>
+      <label>DOB </label>
+  <input type="date" name="dob" placeholder="Enter your dob" required/><br><br>
+   <label>Age </label>
+  <input type="text" name="age" placeholder="Enter your age" required/>
+
+<div>
+<label>
+Gender :
+</label><br>
+<input type="radio" value="Male" name="gender" checked > Male
+<input type="radio" value="Female" name="gender"> Female
+<input type="radio" value="Other" name="gender"> Other
+
+</div>
+<label>
+Phone :
+</label>
+<input type="text" name="phone" placeholder="phone no." size="10" required />
+Address :
+<textarea cols="80" rows="5" placeholder="Current Address" value="address" required>
+</textarea>
+ <label><b>Email</b></label>
+ <input type="email" placeholder="Enter Email" name="email" required>
+
+
+        <div class="category_div" id="category_div">District:
+            <select name="category" class="required-entry" id="category" onchange="javascript: dynamicdropdown(this.options[this.selectedIndex].value);">
+                <option value="">Select District</option>
+                <option value="Kottayam">Kottayam</option>
+                <option value="Kollam">Kollam</option>
+                <option value="Thiruvananthapuram">Thiruvananthapuram</option>
+                <option value="Alappuzha">Alappuzha</option>
+                <option value="Ernakulam">Ernakulam</option>
+            </select>
+        </div>
+        <div class="sub_category_div" id="sub_category_div">Branch:
+            <script type="text/javascript" language="JavaScript">
+                document.write('<select name="subcategory" id="subcategory"><option value="">Please select branch</option></select>')
+            </script>
+            <noscript>
+                <select name="subcategory" id="subcategory" >
+                    <option value="">Please select branch</option>
+                </select>
+            </noscript>
+        </div><br><br>
+
+      <label>Account type :</label>
+   <select name="acnt type" r>
+       <option value="">--Please select--</option>
+       <option value="svng">Savings account</option>
+       <option value="crnt">Current account</option>
+   </select><br><br>
+
+
+    <label>Materials provide :</label><br>
+    <input type="checkbox">Debit card
+    <input type="checkbox">Credit card
+    <input type="checkbox">Cheque book<br><br>
+
+      <button type="submit" onClick="conf()" class="registerbtn">Submit</button>
+
+<a href="demo">Home</a>
+  </div>
+
+</form>
+      <script type="text/javascript">
+    function validation()
+    {
+    var val=confirm("application accepted");
+    }
+    </script>
+</body>
+</html>
